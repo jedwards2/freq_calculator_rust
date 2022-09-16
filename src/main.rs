@@ -1,5 +1,8 @@
+use std::env;
+
 fn main() {
-    let num = 55.0;
+    let args: Vec<String> = env::args().collect();
+    let num = args[1].parse::<f64>().unwrap();
     let mut list = Vec::new();
     let mut uppers = upper_freqs(num);
     let mut lowers = lower_freqs(num);
