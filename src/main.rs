@@ -30,7 +30,7 @@ fn lower_freqs(mut num: f64) -> Vec<f64>{
 
     while num / 2.0 > 20.0 {
         num /= 2.0;
-        all_freqs.push(num);
+        all_freqs.insert(0, num);
     }
 
     all_freqs
